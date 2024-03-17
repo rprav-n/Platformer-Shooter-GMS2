@@ -7,3 +7,5 @@ jumpsp = -8;
 key_left = 0;
 key_right = 0;
 key_jump = 0;
+
+controller = 0;
