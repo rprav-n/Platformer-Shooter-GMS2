@@ -19,6 +19,7 @@ recoil = max(0, recoil-1);
 if (mouse_check_button(mb_left) || gamepad_button_check(0, gp_shoulderrb)) && (firingdelay <= 0) {
 	firingdelay = 5;
 	recoil = 4;
+	screenShake(2, 10);
 	var _bullet = instance_create_layer(x, y, "Bullets", oBullet);
 	with (_bullet) {
 		speed = 25;
