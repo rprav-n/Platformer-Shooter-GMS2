@@ -28,8 +28,9 @@ y += vsp;
 
 // Animations
 if (hsp != 0) {
-	image_xscale = sign(hsp);
+	image_xscale = sign(hsp) * size;
 }
+image_yscale = size;
 if (!place_meeting(x, y+1, oWall)) {
 	sprite_index = sEnemyAir;
 	image_speed = 0;
@@ -50,7 +51,8 @@ if (hp <= 0) {
 		direction = other.hitfrom;
 		hsp = lengthdir_x(3, direction);
 		vsp = lengthdir_y(3, direction) - 2;
-		if (hsp != 0) image_xscale = sign(hsp);
+		if (hsp != 0) image_xscale = sign(hsp) * other.size;
+		image_yscale = other.size;
 	}
 	instance_destroy();
 }
