@@ -15,6 +15,7 @@ if (menu_control) {
 	}
 	
 	if (keyboard_check_pressed(vk_enter)) {
+		audio_play_sound(sndShoot, 1, 0);
 		menu_x_target = gui_width + 200;
 		menu_committed = menu_cursor;
 		screenShake(4, 30);

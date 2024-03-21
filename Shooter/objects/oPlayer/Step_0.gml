@@ -65,6 +65,12 @@ if (!place_meeting(x, y+1, oWall)) {
 	if (sign(vsp) > 0) image_index = 1;
 	else image_index = 0;
 } else {
+	
+	if (sprite_index == sPlayerAir) {
+		audio_sound_pitch(sndLanding, random_range(0.8, 1.2));
+		audio_play_sound(sndLanding, 1, 0);
+	}
+	
 	if (hsp == 0) {
 		image_speed = 0;
 		sprite_index = sPlayer;
